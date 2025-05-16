@@ -1,0 +1,71 @@
+@import "./utils/mixins";
+@import "./utils/variables";
+
+@import "./base/font";
+@import "./base/reset";
+
+body {
+  background: $primary-dark;
+  h2 {
+    @include title;
+  }
+
+}
+
+
+.hide {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.accordion__label {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.accordion__child {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transform: scale(0);
+  transform-origin: bottom right;
+  border-radius:  16px 16px 0 16px;
+  @include accordion__child;
+  transition:4s ease-out;
+  // font-size:0px;
+
+  input:checked~& {
+    margin-top:10px;
+    padding: 10px;
+    height:70px;
+    opacity: 1;
+    transform: scale(1, 1);
+    // font-size:18px;
+  }
+}
+
+.testaccordion__child {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  border-radius:  16px 16px  16px 0 ;
+  @include accordion__child;
+  transition:4s ease;
+  // font-size:0px;
+
+  input:checked~& {
+    margin-top:10px;
+    padding: 10px;
+    height: 50px;
+    opacity: 1;
+    transform: scale(1);
+    // font-size:18px;
+  }
+}

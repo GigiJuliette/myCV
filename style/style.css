@@ -1,0 +1,125 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background: rgb(13, 14, 32);
+}
+body h2 {
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(45, 28, 127, 0.3);
+  backdrop-filter: blur(4.2px);
+  -webkit-backdrop-filter: blur(4.2px);
+  border: 1px solid rgba(200, 179, 246, 0.26);
+  margin: 2rem 1rem 0 1rem;
+  padding: 10px;
+  font-family: "Melodrama", serif;
+  font-size: 30px;
+  color: rgb(200, 179, 246);
+  text-align: center;
+}
+
+.hide {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.accordion__label:hover {
+  cursor: pointer;
+}
+
+.accordion__child {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transform: scale(0);
+  transform-origin: bottom right;
+  border-radius: 16px 16px 0 16px;
+  border: 1px solid rgba(200, 179, 246, 0.26);
+  padding: 0px;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(200, 179, 246);
+  color: rgb(200, 179, 246);
+  text-align: center;
+  margin: 0 calc(1rem + 16px);
+  transition: 4s ease-out;
+}
+input:checked ~ .accordion__child {
+  margin-top: 10px;
+  padding: 10px;
+  height: 70px;
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.testaccordion__child {
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  border-radius: 16px 16px 16px 0;
+  border: 1px solid rgba(200, 179, 246, 0.26);
+  padding: 0px;
+  font-family: "Quicksand", sans-serif;
+  color: rgb(200, 179, 246);
+  color: rgb(200, 179, 246);
+  text-align: center;
+  margin: 0 calc(1rem + 16px);
+  transition: 4s ease;
+}
+input:checked ~ .testaccordion__child {
+  margin-top: 10px;
+  padding: 10px;
+  height: 50px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+/*# sourceMappingURL=style.css.map */
