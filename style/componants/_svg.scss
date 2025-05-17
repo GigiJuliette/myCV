@@ -20,18 +20,31 @@
   fill:$primary-light;
 }
 
+// the two following transition work i just keep the first to help 
+
+// #cat{
+//   transform-origin: center;
+//   transform:translateY(175%) translateX(680%);
+//   transition: 1s .5s;
+//   opacity:0;
+//   height:0;
+//   input:checked~& {
+//     transform:translateY(85%) translateX(680%);
+//     opacity:1;
+//     height:50px;
+//   }
+// }
+
 #cat{
-  overflow:hidden;
-  transform-origin: bottom;
-  transform: translateX(680%) translateY(85%) scale(0);
-  opacity: 0;
+  transform-origin: 25px 50px;
+  transform:translateY(85%) translateX(680%) scaleY(0);
+  transition: 1s ease;
+  opacity:0;
   height:0;
-  transition: .5s;
   input:checked~& {
-    height:50px;
-    transform:translateX(680%)translateY(85%)scale(1);
+    transform:translateY(85%) translateX(680%)scaleY(1);
     opacity:1;
-    transition: 1s .5s;
+    height:50px;
+    transition-delay:.5s;
   }
 }
-
