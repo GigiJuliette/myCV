@@ -75,10 +75,21 @@ table {
   opacity: 0;
   height: 0;
 }
+#cat .paws {
+  transform-origin: top;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: 1s;
+}
 input:checked ~ #cat {
   transform: translateY(85%) translateX(680%) scaleY(1);
   opacity: 1;
   height: 50px;
+  transition-delay: 0.5s;
+}
+input:checked ~ #cat .paws {
+  opacity: 1;
+  transform: scaleY(1);
   transition-delay: 0.5s;
 }
 
