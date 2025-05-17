@@ -1,0 +1,37 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+#head{
+  fill:$primary-light;
+}
+.ear{
+  fill:$primary-light
+}
+#bottom-eye{
+  fill:$primary-dark;
+}
+#upper-eye{
+  fill:$primary-dark;
+}
+#fill-eye{
+  fill:$primary-light;
+}
+.paws{
+  fill:$primary-light;
+}
+
+#cat{
+  overflow:hidden;
+  transform-origin: bottom;
+  transform: translateX(680%) translateY(85%) scale(0);
+  opacity: 0;
+  height:0;
+  transition: .5s;
+  input:checked~& {
+    height:50px;
+    transform:translateX(680%)translateY(85%)scale(1);
+    opacity:1;
+    transition: 1s .5s;
+  }
+}
+

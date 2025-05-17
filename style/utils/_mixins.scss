@@ -2,11 +2,8 @@
 
 
 @mixin title{
-  // background: rgba(255, 255, 255, 0.29);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(45, 28, 127, 0.3);
-  backdrop-filter: blur(4.2px);
-  -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(200, 179, 246, 0.26);
   margin: 2rem 1rem 0 1rem;
   padding:10px;

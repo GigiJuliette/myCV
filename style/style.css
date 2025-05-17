@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,6 +44,45 @@ table {
   border-spacing: 0;
 }
 
+#head {
+  fill: rgb(200, 179, 246);
+}
+
+.ear {
+  fill: rgb(200, 179, 246);
+}
+
+#bottom-eye {
+  fill: rgb(13, 14, 32);
+}
+
+#upper-eye {
+  fill: rgb(13, 14, 32);
+}
+
+#fill-eye {
+  fill: rgb(200, 179, 246);
+}
+
+.paws {
+  fill: rgb(200, 179, 246);
+}
+
+#cat {
+  overflow: hidden;
+  transform-origin: bottom;
+  transform: translateX(680%) translateY(85%) scale(0);
+  opacity: 0;
+  height: 0;
+  transition: 0.5s;
+}
+input:checked ~ #cat {
+  height: 50px;
+  transform: translateX(680%) translateY(85%) scale(1);
+  opacity: 1;
+  transition: 1s 0.5s;
+}
+
 :root {
   interpolate-size: allow-keywords;
 }
@@ -55,8 +93,6 @@ body {
 body h2 {
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(45, 28, 127, 0.3);
-  backdrop-filter: blur(4.2px);
-  -webkit-backdrop-filter: blur(4.2px);
   border: 1px solid rgba(200, 179, 246, 0.26);
   margin: 2rem 1rem 0 1rem;
   padding: 10px;
@@ -141,35 +177,6 @@ input:checked ~ .leftaccordion__child {
 input:checked ~ .leftaccordion__child p {
   opacity: 1;
   transition: 1s ease 400ms;
-}
-
-svg {
-  width: 200px;
-  height: 200px;
-}
-
-.ear {
-  fill: orange;
-  transform-origin: center bottom;
-  animation: wiggle 1s ease-in-out infinite alternate;
-}
-
-/* Animation CSS */
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(10deg);
-  }
-}
-.ear-left {
-  transform-origin: 75px 60px; /* ajusté selon l'oreille gauche */
-}
-
-.ear-right {
-  transform-origin: 125px 60px; /* ajusté selon l'oreille droite */
-  animation-delay: 0.5s; /* pour que les oreilles bougent en décalé */
 }
 
 /*# sourceMappingURL=style.css.map */
